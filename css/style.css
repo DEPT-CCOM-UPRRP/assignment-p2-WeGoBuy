@@ -11,3 +11,139 @@
     marker-end: url(#arrow-head-highlighted);
     marker-end: url(#arrow-head-highlighted-selected);
 }
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.visualization-container {
+  margin-top: 20px;
+}
+
+.vis-row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Lexis Chart Styles */
+.arrow {
+  stroke-width: 1px;
+  stroke: #ddd;
+  fill: none;
+}
+
+.arrow:hover {
+  stroke-width: 2px;
+  stroke: #888;
+  cursor: pointer;
+}
+
+.arrow-highlighted {
+  stroke-width: 2px;
+  stroke: #aeaeca;
+}
+
+.arrow-selected {
+  stroke-width: 2px;
+  stroke: #e89f03;
+}
+
+.arrow-label {
+  font-size: 10px;
+  font-weight: bold;
+  fill: #333;
+}
+
+/* Bar Chart Styles */
+.bar {
+  fill: #aeaeca;
+  stroke: #333;
+  stroke-width: 0;
+}
+
+.bar:hover {
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+.bar.selected {
+  fill: #7474a7;
+}
+
+/* Scatter Plot Styles */
+.point {
+  fill: #aeaeca;
+  fill-opacity: 0.7;
+  stroke: none;
+  r: 5;
+}
+
+.point:hover:not(.inactive) {
+  stroke: #333;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+.point.selected {
+  fill: #e89f03;
+}
+
+.point.inactive {
+  fill-opacity: 0.15;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  max-width: 250px;
+}
+
+.tooltip.show {
+  opacity: 0.9;
+}
+
+/* Grid Styles */
+.grid line {
+  stroke: #e0e0e0;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+/* Axes */
+.axis-title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Arrow marker styles */
+.default-arrow {
+  marker-end: url(#arrow-head);
+}
+
+.hovered-arrow {
+  marker-end: url(#arrow-head-hovered);
+}
+
+.highlighted-arrow {
+  marker-end: url(#arrow-head-highlighted);
+}
+
+.selected-arrow {
+  marker-end: url(#arrow-head-highlighted-selected);
+}
